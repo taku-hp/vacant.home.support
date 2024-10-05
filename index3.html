@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空き家管理サービス</title>
+    <style>
+        /* 青を基調としたデザイン */
+        body {
+            background-color: #e0f7fa;
+            color: #007bff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #0056b3;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+        }
+        section {
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 800px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input {
+            margin-bottom: 1rem;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        /* レスポンシブデザイン */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>空き家管理サービス</h1>
+    </header>
+
+    <section id="services">
+        <h2>空き家管理が必要な理由</h2>
+        <p>相続や転居で空き家になった家を適切に管理し、資産を守りましょう。</p>
+    </section>
+
+    <section id="contact">
+        <h2>お問い合わせ</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="name">お名前:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="送信">
+        </form>
+    </section>
+</body>
+</html>
