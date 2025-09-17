@@ -4,37 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>空き家管理サービス</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            color: #007bff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header,
+        main,
+        footer {
+            margin: 0 auto;
+            max-width: 960px;
+            padding: 1.5rem;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            border: 1px solid #9ad0f3;
+            border-radius: 4px;
+            padding: 0.6rem;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0.75rem 1.5rem;
+            transition: background-color 0.2s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005fa3;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #004d80;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>私たちの空き家管理サービスへようこそ</h1>
-    <p>このページはGitHub Pagesで公開されています。</p>
+    <header>
+        <h1>私たちの空き家管理サービスへようこそ</h1>
+        <p>空き家を安心して任せられる、地域密着型のサポートを提供しています。</p>
+    </header>
+    <main>
+        <section id="services">
+            <h2>空き家管理が必要な理由</h2>
+            <p>相続や転居で空き家になった家を適切に管理し、資産価値を守りましょう。定期的な巡回や清掃を行うことで、近隣トラブルや老朽化のリスクを減らせます。</p>
+            <ul>
+                <li>月に1回の巡回と写真付きの報告書</li>
+                <li>草木の手入れやポストの整理などの軽作業</li>
+                <li>必要に応じた専門業者との連携サポート</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <p>サービスに関するご相談は、以下のフォームからお気軽にお寄せください。</p>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">お名前</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">お問い合わせ内容</label>
+                <input type="text" id="message" name="message" placeholder="ご相談内容を簡単にご記入ください">
+
+                <input type="submit" value="送信">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 空き家管理サービス</p>
+    </footer>
 </body>
 </html>
-<section id="services">
-    <h2>空き家管理が必要な理由</h2>
-    <p>相続や転居で空き家になった家を適切に管理し、資産を守りましょう。</p>
-</section>
-<section id="contact">
-    <h2>お問い合わせ</h2>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-        <label for="name">お名前:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email"><br>
-        <input type="submit" value="送信">
-    </form>
-</section>
-<link rel="stylesheet" href="styles.css">
-body {
-    background-color: #e0f7fa;
-    color: #007bff;
-    font-family: Arial, sans-serif;
-}
-h1, h2 {
-    color: #0056b3;
-}
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-}
