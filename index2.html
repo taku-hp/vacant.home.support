@@ -3,38 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>空き家管理サービス</title>
+    <title>空き家管理サービス（シンプル版）</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        body {
+            background-color: #f0f9ff;
+            color: #045f99;
+            font-family: 'Noto Sans JP', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #71c8ff, #188cce);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        main {
+            margin: 0 auto;
+            max-width: 840px;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        section + section {
+            margin-top: 2rem;
+        }
+
+        section {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(24, 140, 206, 0.12);
+            padding: 1.75rem;
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #0b5c8f;
+        }
+
+        p,
+        li {
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        input,
+        textarea {
+            border: 1px solid #acd7f6;
+            border-radius: 6px;
+            font: inherit;
+            padding: 0.75rem;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #188cce;
+            border: none;
+            border-radius: 999px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            justify-self: start;
+            padding: 0.8rem 2.2rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button[type="submit"]:hover {
+            box-shadow: 0 12px 24px rgba(24, 140, 206, 0.25);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #0b5c8f;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 1.5rem 1rem 2.5rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>私たちの空き家管理サービスへようこそ</h1>
-    <p>このページはGitHub Pagesで公開されています。</p>
+    <header>
+        <h1>空き家管理サービス</h1>
+        <p>シンプルなプランで気軽に始められる空き家管理のご案内です。</p>
+    </header>
+    <main>
+        <section id="services">
+            <h2>基本サービス内容</h2>
+            <p>初めて空き家管理を検討する方向けに、必要最低限の点検項目をまとめました。月1回の巡回で建物の状況を確認し、写真とともにレポートをお届けします。</p>
+            <ul>
+                <li>屋外・屋内の目視点検</li>
+                <li>郵便物の回収と転送</li>
+                <li>窓・ドアの施錠確認</li>
+                <li>雨漏りや破損の簡易チェック</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <p>ご希望の巡回頻度や追加作業など、柔軟に対応いたします。以下のフォームからお気軽にお問い合わせください。</p>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">お名前</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">お問い合わせ内容</label>
+                <textarea id="message" name="message" placeholder="例：月2回の巡回を希望、敷地内の除草作業など"></textarea>
+
+                <button type="submit">送信する</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 空き家管理サービス（シンプル版）</p>
+    </footer>
 </body>
 </html>
-<section id="services">
-    <h2>空き家管理が必要な理由</h2>
-    <p>相続や転居で空き家になった家を適切に管理し、資産を守りましょう。</p>
-</section>
-<section id="contact">
-    <h2>お問い合わせ</h2>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-        <label for="name">お名前:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email"><br>
-        <input type="submit" value="送信">
-    </form>
-</section>
-<link rel="stylesheet" href="styles.css">
-body {
-    background-color: #e0f7fa;
-    color: #007bff;
-    font-family: Arial, sans-serif;
-}
-h1, h2 {
-    color: #0056b3;
-}
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-}
